@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    
+}
+
+header {
+    font-size: 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 50px;
+    padding: 10px;
+    border: solid 2px;
+    width: 450px;
+    height: 70vh;
+    background-color: rgb(8, 116, 55);
+}
+
+.Screen {
+    width: 400px;
+    height: 25vh;
+    border: solid 2px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+    background-color: rgba(255, 255, 255, 0.902);
+    font-size: 25px;
+    font-weight:bold;
+    color: #0a0a0a;
+    
+}
+
+.Buttons {
+    display: flex;
+    flex-direction:column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.Fifth-Line button,
+.Multiply,
+.Divide,
+.Substract,
+.Add {
+    background-color: rgb(233, 233, 175);
+}
+
+.Equal,
+.Dot {
+    background-color: rgb(212, 190, 141);
+}
+
+.Extra-Buttons button {
+    width: 195px;
+    height: 50px;
+    
+}
+
+.Clear-All {
+    background-color: rgb(214, 80, 80);
+}
+
+.Clear {
+    background-color: rgb(231, 141, 141);
+    
+}
+
+button {
+    width: 90px;
+    height: 5vh;
+    margin: 5px;
+    font-size: 20px;
+    border: solid 2px;
+    background-color: rgb(163, 158, 158);
+
+}
+
+i {
+    color: #000000;;
+}
+
+button:active {
+    background-color: #687068;
+    transform: translateY(2px);
+  }
