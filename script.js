@@ -22,7 +22,7 @@ let operator = '';
 let buttonsArr = [];
 let bracketsArr = ['(',')'];
 let b = 0;
-const operators = ['+','-','x','÷','^','√'];
+const operators = ['+','-','x','÷','^','√','='];
 
 
 function initialize(e) {
@@ -39,7 +39,7 @@ function specialKeys(e) {
     else if (e.key === 'Enter') userInput = '='
     else if (e.key === '*') userInput = 'x';
     else if (e.key === '/') userInput = '÷';
-    else userInput = e.key;
+    else if ((/\d/g).test(e.key) || operators.includes(e.key)) userInput = e.key;
 }
 
 function clear(e) {
@@ -100,7 +100,8 @@ function brackets(e) {
 
 function userInputs(e) {
     console.log(userInput)
-    if (userInput === 'Backspace' || userInput === 'Delete') clear(e);
+    
+     if (userInput === 'Backspace' || userInput === 'Delete') clear(e);
     else if (clearAll(e)) {
         initialize(e)
         return;
@@ -195,7 +196,7 @@ function operate(e) {
     if (buttonsArr.includes("=")) {
         result = result.toString();
         if (result.includes(".")) fixDecimals(e);
-        //buttonsArr.push(result);
+        buttonsArr.push(result);
     } 
     console.table(buttonsArr);
     screen.textContent = buttonsArr.join('');
