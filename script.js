@@ -39,7 +39,8 @@ function specialKeys(e) {
     else if (e.key === 'Enter') userInput = '='
     else if (e.key === '*') userInput = 'x';
     else if (e.key === '/') userInput = '÷';
-    else if ((/\d/g).test(e.key) || operators.includes(e.key) || e.key === 'Backspace' || e.key === 'Escape') userInput = e.key;
+    else if ((/\d/g).test(e.key) || operators.includes(e.key) || e.key === 'Backspace' 
+    || e.key === 'Escape') userInput = e.key;
 }
 
 function clear(e) {
